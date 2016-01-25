@@ -14,16 +14,7 @@ SPIDER_MODULES = ['grandnews_crawler.spiders']
 NEWSPIDER_MODULE = 'grandnews_crawler.spiders'
 
 # image storage type
-BUCKET = 'grandnews-sh'
 
-# Configure Ali-OSS Storage
-
-# access-key-id
-ALI_OSS_ACCESS_KEY_ID = 'UikjEckSgbXIj6tg'
-# access-key
-ALI_OSS_ACCESS_KEY_SECRET = 'OHqe6YOrBM42IPJfumhZzDq49REw2V'
-# endpoint
-ALI_OSS_ENDPOINT = 'http://oss-cn-shanghai.aliyuncs.com'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'grandnews_crawler (+http://www.yourdomain.com)'
