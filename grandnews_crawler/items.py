@@ -14,4 +14,5 @@ class GrandnewsCrawlerItem(scrapy.Item):
     title = Field()
     image_urls = Field()
     image_title = Field()
+    scan_num = Field()
 
