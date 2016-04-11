@@ -32,7 +32,7 @@ class GrandNewsTiebaSpider(CrawlSpider):
     rules = (
             Rule(CustomLinkExtractor(restrict_xpaths=(u'//a[starts-with(@title,"【Grand news】")]',),custom_param_str='?see_lz=1')
             , callback='parse_post_content'),
-            Rule (CustomLinkExtractor(restrict_xpaths=(u'//a[text()="下一页"]',),custom_param_str='?see_lz=1')
+            Rule (CustomLinkExtractor(restrict_xpaths=(u'//a[text()="下一页"]',),custom_param_str='see_lz=1')
             , follow= True),
         )
 

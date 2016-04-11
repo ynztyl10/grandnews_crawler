@@ -36,6 +36,6 @@ class CustomLinkExtractor(LxmlLinkExtractor):
             all_links.extend(self._process_links(links))
         if self.custom_param_str:
             for i in xrange(0,len(all_links)):
-                all_links[i].url += self.custom_param_str
+                all_links[i].url = all_links[i].url + "?" + self.custom_param_str if "?" not in all_links[i].url else all_links[i].url + "&" + self.custom_param_str
         return unique_list(all_links)
 
