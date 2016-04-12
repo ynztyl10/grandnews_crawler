@@ -9,7 +9,7 @@ from grandnews_crawler.linkextractors import CustomLinkExtractor
 from grandnews_crawler.items import GrandnewsCrawlerItem
 from grandnews_crawler.cnnum import getResultForDigit
 
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(name)s %(levelname)s %(filename)s %(funcName)s %(lineno)d %(message)s',
                     datefmt='%m-%d %H:%M:%S',
                     filename='spider.log',

@@ -36,10 +36,12 @@ class OssPipeline(object):
             if image[-8:] == '.jpg.jpg':
                 image = image[:-4]
             input = requests.get(image)
+            logger.info("get image %s",image)
             image_name = '%s/%d.jpg' % (image_title,i)
             result = self.bucket.put_object(image_name, input)
             if result.status != 200:
                 logger.warning('upload to server error! image_url : %s|bucket : %s|image_index : %d',image, image_title, i)
+        logger.debug('upload end %s',image_title)
         return item
 
         
