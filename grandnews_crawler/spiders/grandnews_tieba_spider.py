@@ -30,9 +30,9 @@ class GrandNewsTiebaSpider(CrawlSpider):
         'http://tieba.baidu.com/f?kw=%E6%B5%B7%E8%B4%BC%E7%8E%8B&ie=utf-8&tab=good&cid=4&pn=0'
     ]
     rules = (
-            Rule(CustomLinkExtractor(restrict_xpaths=(u'//a[starts-with(@title,"【Grand news】")]',),custom_param_str='?see_lz=1')
+            Rule(CustomLinkExtractor(restrict_xpaths=(u'//a[starts-with(@title,"【Grand news】")]',),custom_param_str='see_lz=1')
             , callback='parse_post_content'),
-            Rule (CustomLinkExtractor(restrict_xpaths=(u'//a[text()="下一页"]',),custom_param_str='see_lz=1')
+            Rule (CustomLinkExtractor(restrict_xpaths=(u'//a[text()="下一页"]',))
             , follow= True),
         )
 

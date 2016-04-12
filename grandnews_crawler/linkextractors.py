@@ -1,5 +1,6 @@
 #coding=utf-8
 from scrapy.linkextractors.lxmlhtml import *
+from urlparse import urlparse
 import logging
 
 logger = logging.getLogger('CustomLinkExtractor')
